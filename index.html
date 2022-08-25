@@ -13,7 +13,11 @@
 
 		<script type="module">
 			const timeline = await fetch('./database.json').then((database) => database.json()); 
-			window.timeline = new TL.Timeline('timeline-embed', timeline);
+			const options = {
+			  	hash_bookmark: true,    
+				font: "roboto-megrim" 
+			};
+			window.timeline = new TL.Timeline('timeline-embed', timeline, options);
 		</script>
 	</body>
 </html>
